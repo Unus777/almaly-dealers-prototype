@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Алмалы Керамик — дилерский портал · прототип v3</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="proto-flag" id="protoFlag" title="Прототип не опубликован. Цены с пометкой «пример» — демонстрационные."><i></i>Прототип · не опубликован</div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Алмалы Керамик — наверх"><span class="logo-mark" aria-hidden="true"><b>A</b></span><span class="logo-txt"><b>ALMALI</b> CERAMIC<small>дилерский портал</small></span></a>
+  <nav class="nav-links" aria-label="Разделы">
+    <a href="#catalog">Каталог</a><a href="#room">Примерочная</a><a href="#why">Почему мы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <div class="nav-right">
+    <div class="paytoggle" role="radiogroup" aria-label="Какие цены показывать">
+      <span class="paytoggle-pill" aria-hidden="true"></span>
+      <button type="button" role="radio" data-mode="cash" aria-checked="true">Наличные</button>
+      <button type="button" role="radio" data-mode="noncash" aria-checked="false">Безнал<small> с НДС</small></button>
+    </div>
+    <button type="button" class="icon-btn" id="cartBtn" aria-label="Открыть заявку"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h2.2l2 10.2h10.1l2-7.4H7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9.5" cy="19.3" r="1.3"/><circle cx="16.8" cy="19.3" r="1.3"/></svg><span class="badge" id="cartCount">0</span></button>
+    <a class="btn ghost sm" href="#admin" id="adminLink" aria-label="Редактор цен"><span class="t">Цены</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-slides" id="heroSlides"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Керамогранит 60×60 и 60×120 · склады в Твери и Москве</p>
+    <h1 class="hero-title" id="heroTitle" data-text="Плитка, которая продаёт себя сама"></h1>
+    <p class="hero-sub reveal" style="--d:.85s">Отгрузка в день заказа, ежедневно и без выходных. Своя доставка и личный менеджер для каждого дилера.</p>
+    <div class="hero-cta reveal" style="--d:1.05s">
+      <a class="btn primary magnetic" href="#catalog"><span>Открыть каталог</span><i aria-hidden="true">→</i></a>
+      <a class="btn ghost magnetic" href="#room"><span>Примерить в интерьере</span></a>
+    </div>
+  </div>
+  <aside class="hero-chip" id="heroChip" aria-live="polite">
+    <img alt="" id="chipImg" width="64" height="64"><div><small id="chipArt"></small><b id="chipName"></b><span id="chipPrice"></span></div>
+  </aside>
+  <div class="hero-dots" id="heroDots" aria-label="Слайды"></div>
+  <a class="scroll-cue" href="#facts" aria-label="Листать вниз"><span></span></a>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<section class="facts" id="facts" aria-label="Цифры">
+  <div class="fact reveal"><b class="count" id="cntArts" data-to="0">0</b><span>артикулов в каталоге</span></div>
+  <div class="fact reveal" style="--d:.08s"><b class="count" id="cntStock" data-to="0" data-suffix=" м²">0</b><span>свободно на складах сейчас</span></div>
+  <div class="fact reveal" style="--d:.16s"><b class="count" data-to="0.2" data-dec="1" data-suffix="%">0</b><span>водопоглощение</span></div>
+  <div class="fact reveal" style="--d:.24s"><b>PEI IV</b><span>класс износостойкости</span></div>
+  <div class="fact reveal" style="--d:.32s"><b class="count" data-to="20" data-prefix="от ">0</b><span>дней — свой дизайн от 1000 м²</span></div>
+</section>
+
+<section class="catalog" id="catalog">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Каталог</p>
+    <h2>Выберите <em>фактуру</em> — остальное сделаем мы</h2>
+    <p class="lead">Две цены на каждой карточке: за наличный и безналичный расчёт (с НДС). Переключатель в шапке меняет основную цену на всём сайте.</p>
+  </div>
+  <div class="toolbar" id="toolbar">
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6"/></svg><input id="q" type="search" placeholder="Название или артикул" autocomplete="off" aria-label="Поиск"></label>
+    <div class="seg" id="fmtSeg" role="radiogroup" aria-label="Формат"><button data-v="all" class="on">Все</button><button data-v="60×60">60×60</button><button data-v="60×120">60×120</button></div>
+    <div class="selwrap"><select id="surf" aria-label="Поверхность"><option value="all">Любая поверхность</option></select></div>
+    <button class="chip" id="fNew" aria-pressed="false">Новинки</button>
+    <button class="chip" id="fStock" aria-pressed="false">В наличии</button>
+    <div class="selwrap right"><select id="sort" aria-label="Сортировка"><option value="stock">Больше в наличии</option><option value="price">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="name">По названию</option></select></div>
+  </div>
+  <p class="found" id="found" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>Ничего не нашлось. Попробуйте снять фильтры.</p>
+</section>
+
+<section class="room" id="room">
+  <div class="sec-head reveal">
+    <p class="eyebrow">Примерочная</p>
+    <h2>Посмотрите плитку <em>в комнате</em> до покупки</h2>
+    <p class="lead">Плитка в реальном масштабе 60×60 или 60×120, с разворотом и разнотоном, как при укладке. Выберите шов, раскладку и поверхность — глянец отражает окно и мебель.</p>
+  </div>
+  <div class="room-wrap reveal">
+    <div class="room-stage" id="roomStage">
+      <div class="room-gl" id="roomGl"></div>
+      <div class="room-loading" id="roomLoading"><span></span>Готовим комнату…</div>
+      <div class="room-views seg dark" id="roomModes" role="radiogroup" aria-label="Что облицовать"><button data-m="floor" class="on">Пол</button><button data-m="walls">Стены</button><button data-m="both">Пол и стены</button></div>
+      <div class="room-label" id="roomLabel"></div>
+    </div>
+    <aside class="room-side">
+      <div class="room-ctrl">
+        <div class="ctrl"><span>Раскладка</span><div class="seg" id="patSeg"><button data-p="straight" class="on">Прямая</button><button data-p="half">Со смещением ½</button><button data-p="third">⅓</button></div></div>
+        <div class="ctrl"><span>Цвет шва</span><div class="dots" id="groutDots">
+          <button data-c="#efebe4" title="Белый" style="--c:#efebe4"></button><button data-c="#b9b2a7" title="Светло-серый" class="on" style="--c:#b9b2a7"></button><button data-c="#c9b79c" title="Бежевый" style="--c:#c9b79c"></button><button data-c="#4a4642" title="Графит" style="--c:#4a4642"></button></div></div>
+        <div class="ctrl"><span>Ширина шва</span><div class="seg" id="groutW"><button data-w="1">1 мм</button><button data-w="2" class="on">2 мм</button><button data-w="3">3 мм</button></div></div>
+      </div>
+      <div class="closeup" id="closeup">
+        <div class="loupe-box" id="loupeBox"><img id="loupeImg" alt="Фактура крупно"><div class="loupe" id="loupe"></div><span class="hint">Фактура · лупа</span></div>
+        <canvas id="layoutCv" width="640" height="640" aria-label="Схема раскладки"></canvas>
+      </div>
+      <div class="room-price" id="roomPrice"></div>
+      <button class="btn primary magnetic wide" id="roomAdd"><span>Добавить в заявку</span><i aria-hidden="true">→</i></button>
+    </aside>
+  </div>
+  <div class="swatches-wrap"><button class="sw-nav prev" id="swPrev" aria-label="Назад">‹</button><div class="swatches" id="swatches"></div><button class="sw-nav next" id="swNext" aria-label="Вперёд">›</button></div>
+</section>
+
+<section class="why" id="why">
+  <div class="sec-head reveal"><p class="eyebrow">Почему дилеры выбирают нас</p><h2>Склад, логистика и люди — <em>свои</em></h2></div>
+  <div class="why-grid">
+    <article class="why-card reveal"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18h16M6 18V8l6-4 6 4v10M9 18v-5h6v5" /></svg></i><h3>Ж/д тупик в Твери</h3><p>Собственный склад с железнодорожным тупиком и склад в Москве.</p></article>
+    <article class="why-card reveal" style="--d:.06s"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z"/></svg></i><h3>Отгрузка в день заказа</h3><p>Работаем ежедневно, без выходных.</p></article>
+    <article class="why-card reveal" style="--d:.12s"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg></i><h3>Своя доставка</h3><p>Привезём на объект или на ваш склад.</p></article>
+    <article class="why-card reveal" style="--d:.18s"><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg></i><h3>Личный менеджер</h3><p>Один человек ведёт ваши заказы от счёта до отгрузки.</p></article>
+    <article class="why-card reveal" style="--d:.24s"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></svg></i><h3>0,2% · PEI IV</h3><p>Водопоглощение 0,2% и высокий класс износостойкости.</p></article>
+    <article class="why-card reveal" style="--d:.30s"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></i><h3>Свой дизайн</h3><p>Изготовим ваш дизайн от 1000 м², срок — от 20 дней.</p></article>
+  </div>
+</section>
+
+<section class="cta-band reveal">
+  <h2>Нужен счёт под ваш объём?</h2>
+  <p>Соберите заявку в каталоге — менеджер пришлёт счёт за наличный или безналичный расчёт.</p>
+  <button class="btn primary magnetic" id="ctaCart"><span>Открыть заявку</span><i aria-hidden="true">→</i></button>
+</section>
+
+<footer class="foot" id="contacts">
+  <div><b>ООО «Алмалы-Керамик»</b><p>Оптовые поставки керамогранита</p><p><a href="https://almali-ceramic.ru/" target="_blank" rel="noopener">almali-ceramic.ru</a> — официальный сайт</p></div>
+  <div><b>Шоу-рум и офис продаж</b><p>г. Москва, ул. Монтажная, д. 3, этаж 4, офис 41</p><p><a href="tel:+74993907888">+7 499 390-78-88</a> · <a href="tel:+79253907888">+7 925 390-78-88</a></p><p><a href="mailto:almaliceramic@mail.ru">almaliceramic@mail.ru</a></p></div>
+  <div><b>Прототип v3</b><p>Каталог, остатки и фото — из действующего портала. Цены с пометкой «пример» не настоящие. Заявки не отправляются.</p></div>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pdTitle"><button class="x" data-close aria-label="Закрыть">×</button><div id="modalBody"></div></div></div>
+<aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-in" role="dialog" aria-label="Заявка"><header><h3>Заявка</h3><button class="x" data-close-drawer aria-label="Закрыть">×</button></header><div id="cartList"></div><footer id="cartTotal"></footer></div></aside>
+
+<section class="admin" id="admin" aria-hidden="true">
+  <div class="admin-in">
+    <header class="admin-head">
+      <div><p class="eyebrow">Только для владельца · прототип</p><h2>Цены: <em>наличные</em> и безнал</h2>
+      <p class="lead">Сохраняется в этом браузере. В <code>data.json</code> действующего сайта поля цены сейчас нет — при внедрении у плитки появится <code>"price": {"cash": …, "noncash": …}</code> за м².</p></div>
+      <a class="x" href="#" id="adminClose" aria-label="Закрыть">×</a>
+    </header>
+    <div class="rule">
+      <label class="rule-x">Безнал = нал + <input type="number" id="ruleX" value="12" min="0" max="100" step="0.5" inputmode="decimal"> %</label>
+      <label>Округление <span class="selwrap"><select id="ruleRound"><option value="1">до 1 ₽</option><option value="10" selected>до 10 ₽</option><option value="50">до 50 ₽</option></select></span></label>
+      <button class="btn primary sm" id="ruleApply">Пересчитать «авто»</button>
+      <button class="btn ghost sm" id="exportBtn">JSON для data.json</button>
+      <button class="btn ghost sm danger" id="resetBtn">Очистить цены</button>
+      <label class="search sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6"/></svg><input id="adminQ" type="search" placeholder="Артикул или название" aria-label="Поиск"></label>
+    </div>
+    <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th></th><th>Плитка</th><th>Наличные, ₽/м²</th><th title="Безнал считается по правилу">Авто</th><th>Безнал с НДС, ₽/м²</th><th>За упаковку · нал / безнал</th></tr></thead><tbody id="adminRows"></tbody></table></div>
+    <pre class="export" id="exportOut" hidden></pre>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
