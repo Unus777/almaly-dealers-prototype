@@ -1,0 +1,13 @@
+{
+  "name": "almaly-dealers-2",
+  "private": true,
+  "description": "Второй дилерский сайт Алмалы Керамик — инструменты разработки (не нужны для работы сайта)",
+  "scripts": {
+    "test": "node tests/apps-script.test.cjs && node tests/site.test.mjs",
+    "build:room": "esbuild src/room.src.js --bundle --minify --format=iife --alias:three=./vendor/three.module.js --outfile=room.bundle.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.65.0"
+  }
+}

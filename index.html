@@ -3,16 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Алмалы Керамик — дилерский портал · прототип v3</title>
-<link rel="icon" href="data:,">
+<title>Алмалы Керамик — керамогранит 60×60 и 60×120 оптом для дилеров</title>
+<meta name="description" content="Дилерский портал ООО «Алмалы-Керамик»: керамогранит 60×60 и 60×120 со складов в Москве и Твери. Остатки онлайн, цены за наличный и безналичный расчёт, примерка плитки в 3D-комнате, заявка менеджеру в один клик.">
+<meta name="theme-color" content="#0d0c0b">
+<link rel="canonical" href="https://unus777.github.io/almaly-dealers-prototype/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Алмалы Керамик">
+<meta property="og:title" content="Алмалы Керамик — керамогранит оптом для дилеров">
+<meta property="og:description" content="Остатки онлайн, цены нал и безнал, 3D-примерочная и заявка менеджеру. Склады в Москве и Твери, отгрузка в день заказа.">
+<meta property="og:url" content="https://unus777.github.io/almaly-dealers-prototype/">
+<meta property="og:image" content="https://unus777.github.io/almaly-dealers-prototype/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=d2-1">
 </head>
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
-<div class="proto-flag" id="protoFlag" title="Прототип не опубликован. Цены с пометкой «пример» — демонстрационные."><i></i>Прототип · не опубликован</div>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top" aria-label="Алмалы Керамик — наверх"><span class="logo-mark" aria-hidden="true"><b>A</b></span><span class="logo-txt"><b>ALMALI</b> CERAMIC<small>дилерский портал</small></span></a>
@@ -26,7 +39,7 @@
       <button type="button" role="radio" data-mode="noncash" aria-checked="false">Безнал<small> с НДС</small></button>
     </div>
     <button type="button" class="icon-btn" id="cartBtn" aria-label="Открыть заявку"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h2.2l2 10.2h10.1l2-7.4H7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9.5" cy="19.3" r="1.3"/><circle cx="16.8" cy="19.3" r="1.3"/></svg><span class="badge" id="cartCount">0</span></button>
-    <a class="btn ghost sm" href="#admin" id="adminLink" aria-label="Редактор цен"><span class="t">Цены</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+    <a class="btn ghost sm" href="tel:+74993907888" id="callLink" aria-label="Позвонить: +7 499 390-78-88"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="t">+7 499 390-78-88</span></a>
   </div>
 </header>
 
@@ -130,34 +143,56 @@
 <footer class="foot" id="contacts">
   <div><b>ООО «Алмалы-Керамик»</b><p>Оптовые поставки керамогранита</p><p><a href="https://almali-ceramic.ru/" target="_blank" rel="noopener">almali-ceramic.ru</a> — официальный сайт</p></div>
   <div><b>Шоу-рум и офис продаж</b><p>г. Москва, ул. Монтажная, д. 3, этаж 4, офис 41</p><p><a href="tel:+74993907888">+7 499 390-78-88</a> · <a href="tel:+79253907888">+7 925 390-78-88</a></p><p><a href="mailto:almaliceramic@mail.ru">almaliceramic@mail.ru</a></p></div>
-  <div><b>Прототип v3</b><p>Каталог, остатки и фото — из действующего портала. Цены с пометкой «пример» не настоящие. Заявки не отправляются.</p></div>
+  <div><b>Для дилеров</b><p>Остатки обновляются автоматически со склада. Цены — за м²: наличный расчёт и безнал с НДС. Счёт и точную сумму пришлёт менеджер.</p><p><a href="https://wa.me/79253907888" target="_blank" rel="noopener">Написать в WhatsApp</a></p><p class="staff"><a href="#admin">Цены</a> · <a href="manager.html">Заявки</a> — для сотрудников</p></div>
 </footer>
 
 <div class="modal" id="modal" aria-hidden="true"><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="pdTitle"><button class="x" data-close aria-label="Закрыть">×</button><div id="modalBody"></div></div></div>
-<aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-in" role="dialog" aria-label="Заявка"><header><h3>Заявка</h3><button class="x" data-close-drawer aria-label="Закрыть">×</button></header><div id="cartList"></div><footer id="cartTotal"></footer></div></aside>
+<aside class="drawer" id="drawer" aria-hidden="true"><div class="drawer-in" role="dialog" aria-labelledby="drawerTitle"><header><h3 id="drawerTitle">Заявка</h3><button class="x" data-close-drawer aria-label="Закрыть">×</button></header><div id="cartList"></div><footer id="cartTotal"></footer>
+  <form id="cartForm" class="rq" hidden novalidate>
+    <div id="rqSummary"></div>
+    <div class="fld"><label for="rqName">Ваше имя *</label><input id="rqName" name="name" autocomplete="name" maxlength="80" required><span class="fe"></span></div>
+    <div class="fld"><label for="rqPhone">Телефон *</label><input id="rqPhone" name="tel" type="tel" inputmode="tel" autocomplete="tel" maxlength="24" placeholder="+7 900 000-00-00" required><span class="fe"></span></div>
+    <div class="fld"><label for="rqCompany">Компания или ИНН <small>— необязательно</small></label><input id="rqCompany" name="organization" autocomplete="organization" maxlength="120"><span class="fe"></span></div>
+    <div class="fld"><label for="rqComment">Комментарий <small>— объект, сроки, доставка</small></label><textarea id="rqComment" name="comment" rows="3" maxlength="1000"></textarea></div>
+    <div class="hp" aria-hidden="true"><label for="rqWebsite">Сайт</label><input id="rqWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+    <fieldset class="rq-mode"><legend>Расчёт</legend><label><input type="radio" name="rqMode" value="cash"><span>Наличные</span></label><label><input type="radio" name="rqMode" value="noncash"><span>Безнал с НДС</span></label></fieldset>
+    <div id="rqErr" class="rq-err" role="alert" hidden></div>
+    <button type="submit" class="btn primary wide" id="rqSend"><span>Отправить менеджеру</span><i aria-hidden="true">→</i></button>
+    <p class="cart-note">Нажимая «Отправить», вы соглашаетесь, что менеджер свяжется с вами по указанному телефону. Данные нужны только для обработки заявки.</p>
+    <button type="button" class="linkbtn" id="rqBack">← Вернуться к позициям</button>
+  </form>
+  <div id="cartDone" hidden></div></div></aside>
 
 <section class="admin" id="admin" aria-hidden="true">
   <div class="admin-in">
     <header class="admin-head">
-      <div><p class="eyebrow">Только для владельца · прототип</p><h2>Цены: <em>наличные</em> и безнал</h2>
-      <p class="lead">Сохраняется в этом браузере. В <code>data.json</code> действующего сайта поля цены сейчас нет — при внедрении у плитки появится <code>"price": {"cash": …, "noncash": …}</code> за м².</p></div>
+      <div><p class="eyebrow">Только для владельца</p><h2>Цены: <em>наличные</em> и безнал</h2>
+      <p class="lead">Цены за м² сохраняются в файл <code>prices.json</code> этого сайта и видны всем посетителям через 1–2 минуты после сохранения. Пустая цена — на сайте «Цена по запросу».</p></div>
       <a class="x" href="#" id="adminClose" aria-label="Закрыть">×</a>
     </header>
+    <form class="admin-login" id="adminLogin">
+      <h3>Вход по токену GitHub</h3>
+      <p>Нужен fine-grained токен с доступом только к репозиторию <code>Unus777/almaly-dealers-prototype</code> и правом <b>Contents: Read and write</b>. Токен хранится только в этом браузере. <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Создать токен →</a></p>
+      <div class="login-row"><input id="ghToken" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" aria-label="Токен GitHub"><button class="btn primary sm" id="loginBtn" type="submit"><span>Войти</span></button></div>
+      <label class="remember"><input type="checkbox" id="ghRemember" checked> Запомнить на этом устройстве</label>
+      <p class="login-err" id="loginErr" role="alert" hidden></p>
+    </form>
+    <div id="adminMain" hidden>
     <div class="rule">
       <label class="rule-x">Безнал = нал + <input type="number" id="ruleX" value="12" min="0" max="100" step="0.5" inputmode="decimal"> %</label>
       <label>Округление <span class="selwrap"><select id="ruleRound"><option value="1">до 1 ₽</option><option value="10" selected>до 10 ₽</option><option value="50">до 50 ₽</option></select></span></label>
-      <button class="btn primary sm" id="ruleApply">Пересчитать «авто»</button>
-      <button class="btn ghost sm" id="exportBtn">JSON для data.json</button>
-      <button class="btn ghost sm danger" id="resetBtn">Очистить цены</button>
+      <button class="btn ghost sm" id="ruleApply" type="button">Пересчитать «авто»</button>
       <label class="search sm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6"/></svg><input id="adminQ" type="search" placeholder="Артикул или название" aria-label="Поиск"></label>
     </div>
+    <div class="savebar"><span id="adminState" aria-live="polite"></span><button class="btn ghost sm" id="revertBtn" type="button" disabled>Отменить изменения</button><button class="btn primary sm" id="saveBtn" type="button" disabled><span>Сохранить на сайт</span></button><button class="btn ghost sm" id="logoutBtn" type="button">Выйти</button></div>
     <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th></th><th>Плитка</th><th>Наличные, ₽/м²</th><th title="Безнал считается по правилу">Авто</th><th>Безнал с НДС, ₽/м²</th><th>За упаковку · нал / безнал</th></tr></thead><tbody id="adminRows"></tbody></table></div>
-    <pre class="export" id="exportOut" hidden></pre>
+    </div>
   </div>
 </section>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="config.js?v=d2-1"></script>
+<script src="data.js?v=d2-1"></script>
+<script src="app.js?v=d2-1"></script>
 </body>
 </html>

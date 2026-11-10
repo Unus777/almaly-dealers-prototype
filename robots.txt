@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /manager.html
+Disallow: /admin.html
+Disallow: /apps-script/
+Disallow: /tools/
+Disallow: /tests/

@@ -1,0 +1,15 @@
+# зависимости и артефакты проверок
+node_modules
+tests/shots/
+__pycache__/
+*.pyc
+.DS_Store
+# секреты — НИКОГДА не коммитить (токен GitHub, ключ менеджера, ключи VAPID живут вне репозитория)
+.env
+.env.*
+*.pem
+*.key
+secrets/
+secret*.txt
+owner-access-link.txt
+*token*.txt
