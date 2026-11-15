@@ -1204,6 +1204,7 @@
     1092,
     1363
    ],
+   "sha": "bdf2b9b6a9054955e1162f62b5053a1a5d49abca",
    "src": "08.jpg"
   },
   "face": {
@@ -1223,6 +1224,7 @@
     637,
     1319
    ],
+   "sha": "174efd15a308b9fc11f39e210e7b474028accc8c",
    "src": "09.jpg",
    "tile": "img2/VHF612135/tile.jpg"
   },
