@@ -64,6 +64,7 @@
     1092,
     1363
    ],
+   "sha": "cef5aaeb554af847bbba1da672537f8f82881554",
    "src": "08.jpg"
   },
   "face": {
@@ -83,6 +84,7 @@
     952,
     956
    ],
+   "sha": "b37de6faca3417a92a7bc735c6a05121905a3867",
    "src": "09.jpg",
    "tile": "img2/VHF600080/tile.jpg"
   },
@@ -2634,6 +2636,7 @@
     1092,
     1363
    ],
+   "sha": "41c23ed28d089ea8b5bbf7c4dd2a9ab7545e6bf2",
    "src": "06.jpg"
   },
   "face": {
@@ -2653,6 +2656,7 @@
     931,
     931
    ],
+   "sha": "905795c690d2e24ec5053168e6b643365fa8f2d8",
    "src": "07.jpg",
    "tile": "img2/VHP600806/tile.jpg"
   },
@@ -2729,6 +2733,7 @@
     1092,
     1363
    ],
+   "sha": "682c86ec2a46a4f2b068bb8061be3b27e5efd58f",
    "src": "07.jpg"
   },
   "face": {
@@ -2748,6 +2753,7 @@
     935,
     931
    ],
+   "sha": "b3b7db9aa375842c79fab14cad5a5b329b304fbb",
    "src": "08.jpg",
    "tile": "img2/VHP600813/tile.jpg"
   },
