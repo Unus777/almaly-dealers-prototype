@@ -661,6 +661,7 @@
     669,
     838
    ],
+   "sha": "e353ecd381c82497ef2628be9e6ea61daf21eb8d",
    "src": "07.jpg"
   },
   "face": {
@@ -680,6 +681,7 @@
     600,
     600
    ],
+   "sha": "11bd0dbb18cb83943acfefa26ad0c8db356efc33",
    "src": "01.jpg",
    "tile": "img2/VHF600503/tile.jpg"
   },
